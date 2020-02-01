@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>autonote.sh nedir ?</title><!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="autonote.sh nedir ?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="autonote.sh Bilgisayarımda tuttuğum notları hem insanlarla paylaşmak için hemde github’da yedeklemek için bash script ile bir script yazdım. Ayrıntılar için script’in github sayfasına bakabilirsiniz. Script’in kullanımı ve yapılandırılması ile ilgili video youtube’da mevcut. Script’in içeriği" />
+<meta property="og:description" content="autonote.sh Bilgisayarımda tuttuğum notları hem insanlarla paylaşmak için hemde github’da yedeklemek için bash script ile bir script yazdım. Ayrıntılar için script’in github sayfasına bakabilirsiniz. Script’in kullanımı ve yapılandırılması ile ilgili video youtube’da mevcut. Script’in içeriği" />
+<link rel="canonical" href="http://localhost:4000/turkish_topics/projects/2019/05/13/autonote.html" />
+<meta property="og:url" content="http://localhost:4000/turkish_topics/projects/2019/05/13/autonote.html" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-05-13T10:27:23+03:00" />
+<script type="application/ld+json">
+{"description":"autonote.sh Bilgisayarımda tuttuğum notları hem insanlarla paylaşmak için hemde github’da yedeklemek için bash script ile bir script yazdım. Ayrıntılar için script’in github sayfasına bakabilirsiniz. Script’in kullanımı ve yapılandırılması ile ilgili video youtube’da mevcut. Script’in içeriği","@type":"BlogPosting","headline":"autonote.sh nedir ?","dateModified":"2019-05-13T10:27:23+03:00","datePublished":"2019-05-13T10:27:23+03:00","url":"http://localhost:4000/turkish_topics/projects/2019/05/13/autonote.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/turkish_topics/projects/2019/05/13/autonote.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
+<body>
+    <div class="container"><header>
+  <div class="menu">
+    <ul><li><a href="/">/</a></li><li><a href="/turkish">/turkish</a></li><li><a href="/english">/english</a></li><li><a href="/projects">/projects</a></li><li><a href="/whoami">/whoami.txt</a></li></ul>
+  </div>
+</header>
+<main>
+      <h1 id="autonotesh">autonote.sh</h1>
+<p>Bilgisayarımda tuttuğum notları hem insanlarla paylaşmak için hemde github’da yedeklemek için bash script ile bir script yazdım. Ayrıntılar için script’in <a href="https://github.com/eredotpkfr/autonote.sh" target="_blank">github sayfasına</a> bakabilirsiniz. Script’in kullanımı ve yapılandırılması ile ilgili video <a href="https://www.youtube.com/watch?v=3x0NBIHnO4s" target="_blank">youtube’da</a> mevcut.
+<br /></p>
+<h1 id="scriptin-içeriği">Script’in içeriği</h1>
+<hr />
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+
+<span class="c"># AUTHOR: Eredot_PK&amp;FR       0=={::::::::::::&gt;</span>
+
+<span class="k">function </span>delete_files<span class="o">(){</span>
+    <span class="nv">deleted_files</span><span class="o">=</span><span class="sb">`</span>git status | <span class="nb">grep</span> <span class="s2">"deleted:"</span> | <span class="nb">awk</span> <span class="s1">'{print $2}'</span><span class="sb">`</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$deleted_files</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+        </span>zenity <span class="nt">--question</span> <span class="nt">--width</span> 333 <span class="nt">--text</span><span class="o">=</span><span class="se">\</span>
+	<span class="s2">"Are you sure ? Do you want to delete this/these files </span><span class="se">\</span><span class="s2">
+	?</span><span class="se">\n</span><span class="s2"> </span><span class="si">$(</span><span class="nb">echo</span> <span class="nt">-n</span> <span class="nv">$deleted_files</span> | <span class="nb">tr</span> <span class="s1">' '</span> <span class="s1">'\t'</span><span class="si">)</span><span class="s2">"</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-eq</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+            </span>git <span class="nb">rm</span> <span class="nv">$deleted_files</span>
+        <span class="k">else</span> :
+	<span class="k">fi
+    else</span> :
+    <span class="k">fi</span> <span class="o">}</span>
+
+<span class="k">function </span>push_files<span class="o">(){</span>
+    <span class="nb">cd</span> /home/eredot_pkfr/n0t3s/notes/ <span class="o">&amp;&amp;</span> git add <span class="k">*</span>
+    <span class="k">if</span> <span class="o">[[</span> <span class="s2">"</span><span class="sb">`</span>git status<span class="sb">`</span><span class="s2">"</span> <span class="o">==</span> <span class="k">*</span><span class="s2">"nothing to commit"</span><span class="k">*</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+        if</span> <span class="o">[[</span> <span class="s2">"</span><span class="sb">`</span>git status<span class="sb">`</span><span class="s2">"</span> <span class="o">==</span> <span class="k">*</span><span class="s2">"nothing to commit"</span><span class="k">*</span> <span class="o">&amp;&amp;</span> <span class="se">\</span>
+	<span class="s2">"</span><span class="sb">`</span>git status<span class="sb">`</span><span class="s2">"</span> <span class="o">==</span> <span class="k">*</span><span class="s2">"(use </span><span class="se">\"</span><span class="s2">git push</span><span class="se">\"</span><span class="s2"> to publish </span><span class="se">\</span><span class="s2">
+	your local commits)"</span><span class="k">*</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
+	    </span>git push <span class="nt">-u</span> origin master <span class="nt">--force</span>
+            notify-send <span class="s2">"AUTONOTE - Your Repository Is UP-TO-DATE"</span>
+	<span class="k">else
+	    </span>notify-send <span class="s2">"AUTONOTE - Nothing To Commit      /      </span><span class="se">\</span><span class="s2">
+	    Nothing To Change"</span>
+        <span class="k">fi
+    else
+        </span>delete_files
+	git commit <span class="nt">-m</span> <span class="s2">"</span><span class="sb">`</span><span class="nb">date</span><span class="sb">`</span><span class="s2">"</span> <span class="o">&amp;&amp;</span> git push <span class="nt">-u</span> origin master <span class="nt">--force</span>
+	<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-eq</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+	    </span>notify-send <span class="s2">"AUTONOTE - Your Repository Is UP-TO-DATE"</span>
+	<span class="k">else
+	    </span>notify-send <span class="s2">"AUTONOTE - Files Are Not Pushing ..."</span>
+	<span class="k">fi</span>
+        <span class="c">#new_files=`git status | grep "new file:" | awk '{print $2}'`</span>
+        <span class="c">#git commit -m "`date`" &amp;&amp; git push -u origin master</span>
+    <span class="k">fi</span> <span class="o">}</span>
+
+wget <span class="nt">-q</span> <span class="nt">--spider</span> https://www.google.com/
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-eq</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span>notify-send <span class="s2">"AUTONOTE - ONLINE      /      Starting Script ..."</span>
+    push_files
+<span class="k">else
+        </span>notify-send <span class="s2">"AUTONOTE - OFFLINE      /      </span><span class="se">\</span><span class="s2">
+	Script Failed To Start ..."</span>
+<span class="k">fi</span></code></pre></figure>
+
+<hr />
+
+
+
+    </main><footer>
+  <a href="https://www.github.com/eredotpkfr/my_n0t3s/" target="_blank">my_n0t3s</a> | <a href="https://twitter.com/eredot_pkfr" target="_blank">twitter</a> | <a href="https://github.com/eredotpkfr/" target="_blank">github</a> | <a href="https://www.linkedin.com/in/eredotpkfr/" target="_blank">linkedin</a> |
+</footer>
+</div>
+  </body>
+</html>

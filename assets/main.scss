@@ -1,0 +1,11 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "light";
+@import "base";
+@import "dark";
+
+@media (prefers-color-scheme: dark) {
+	@import "dark";
+}
