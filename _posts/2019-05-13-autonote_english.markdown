@@ -11,7 +11,7 @@ If you often taking note like me, you wanna backup your notes. I thought this su
 # Script's content
 <hr/>
 
-{% highlight bash %}
+{% highlight bash linenos %}
 #!/bin/bash
 
 # AUTHOR: Eredot_PK&FR       0=={::::::::::::>

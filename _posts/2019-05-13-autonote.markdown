@@ -11,7 +11,7 @@ Bilgisayarımda tuttuğum notları hem insanlarla paylaşmak için hemde github'
 # Script'in içeriği
 <hr/>
 
-{% highlight bash %}
+{% highlight bash linenos %}
 #!/bin/bash
 
 # AUTHOR: Eredot_PK&FR       0=={::::::::::::>
