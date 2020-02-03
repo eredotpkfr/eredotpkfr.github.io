@@ -79,6 +79,7 @@
 47
 48
 49
+50
 </pre></td><td class="code"><pre><span class="c">#!/bin/bash</span>
 
 <span class="c"># AUTHOR: Eredot_PK&amp;FR       0=={::::::::::::&gt;</span>
@@ -87,8 +88,8 @@
     <span class="nv">deleted_files</span><span class="o">=</span><span class="sb">`</span>git status | <span class="nb">grep</span> <span class="s2">"deleted:"</span> | <span class="nb">awk</span> <span class="s1">'{print $2}'</span><span class="sb">`</span>
     <span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$deleted_files</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
         </span>zenity <span class="nt">--question</span> <span class="nt">--width</span> 333 <span class="nt">--text</span><span class="o">=</span><span class="se">\</span>
-	<span class="s2">"Are you sure ? Do you want to delete this/these files </span><span class="se">\</span><span class="s2">
-	?</span><span class="se">\n</span><span class="s2"> </span><span class="si">$(</span><span class="nb">echo</span> <span class="nt">-n</span> <span class="nv">$deleted_files</span> | <span class="nb">tr</span> <span class="s1">' '</span> <span class="s1">'\t'</span><span class="si">)</span><span class="s2">"</span>
+	<span class="s2">"Are you sure ? Do you want to delete this/these files</span><span class="se">\</span><span class="s2">
+	 ?</span><span class="se">\n</span><span class="s2"> </span><span class="si">$(</span><span class="nb">echo</span> <span class="nt">-n</span> <span class="nv">$deleted_files</span> | <span class="nb">tr</span> <span class="s1">' '</span> <span class="s1">'\t'</span><span class="si">)</span><span class="s2">"</span>
         <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-eq</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
             </span>git <span class="nb">rm</span> <span class="nv">$deleted_files</span>
         <span class="k">else</span> :
@@ -105,8 +106,8 @@
 	    </span>git push <span class="nt">-u</span> origin master <span class="nt">--force</span>
             notify-send <span class="s2">"AUTONOTE - Your Repository Is UP-TO-DATE"</span>
 	<span class="k">else
-	    </span>notify-send <span class="s2">"AUTONOTE - Nothing To Commit      /      </span><span class="se">\</span><span class="s2">
-	    Nothing To Change"</span>
+	    </span>notify-send <span class="s2">"AUTONOTE - Nothing To Commit      /</span><span class="se">\</span><span class="s2">
+		      Nothing To Change"</span>
         <span class="k">fi
     else
         </span>delete_files
@@ -116,7 +117,8 @@
 	<span class="k">else
 	    </span>notify-send <span class="s2">"AUTONOTE - Files Are Not Pushing ..."</span>
 	<span class="k">fi</span>
-        <span class="c">#new_files=`git status | grep "new file:" | awk '{print $2}'`</span>
+        <span class="c">#new_files=`git status | grep "new file:" | \</span>
+		<span class="c">#awk '{print $2}'`</span>
         <span class="c">#git commit -m "`date`" &amp;&amp; git push -u origin master</span>
     <span class="k">fi</span> <span class="o">}</span>
 
