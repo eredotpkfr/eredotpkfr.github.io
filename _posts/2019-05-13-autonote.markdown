@@ -49,6 +49,8 @@ function push_files(){
 	else
 	    notify-send "AUTONOTE - Files Are Not Pushing ..."
 	fi
+        #new_files=`git status | grep "new file:" | awk '{print $2}'`
+        #git commit -m "`date`" && git push -u origin master
     fi }
 
 wget -q --spider https://www.google.com/
