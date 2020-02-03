@@ -14,7 +14,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-05-13T10:27:23+03:00" />
 <script type="application/ld+json">
-{"description":"autonote.sh Bilgisayarımda tuttuğum notları hem insanlarla paylaşmak için hemde github’da yedeklemek için bash script ile bir script yazdım. Ayrıntılar için script’in github sayfasına bakabilirsiniz. Script’in kullanımı ve yapılandırılması ile ilgili video youtube’da mevcut. Script’in içeriği","headline":"autonote.sh nedir ?","dateModified":"2019-05-13T10:27:23+03:00","datePublished":"2019-05-13T10:27:23+03:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/turkish_topics/projects/2019/05/13/autonote.html"},"url":"http://localhost:4000/turkish_topics/projects/2019/05/13/autonote.html","@context":"https://schema.org"}</script>
+{"description":"autonote.sh Bilgisayarımda tuttuğum notları hem insanlarla paylaşmak için hemde github’da yedeklemek için bash script ile bir script yazdım. Ayrıntılar için script’in github sayfasına bakabilirsiniz. Script’in kullanımı ve yapılandırılması ile ilgili video youtube’da mevcut. Script’in içeriği","@type":"BlogPosting","headline":"autonote.sh nedir ?","dateModified":"2019-05-13T10:27:23+03:00","datePublished":"2019-05-13T10:27:23+03:00","url":"http://localhost:4000/turkish_topics/projects/2019/05/13/autonote.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/turkish_topics/projects/2019/05/13/autonote.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" type="text/css" href="/assets/main.css"></head>
 <body>
@@ -77,6 +77,8 @@
 45
 46
 47
+48
+49
 </pre></td><td class="code"><pre><span class="c">#!/bin/bash</span>
 
 <span class="c"># AUTHOR: Eredot_PK&amp;FR       0=={::::::::::::&gt;</span>
@@ -113,8 +115,10 @@
 	    </span>notify-send <span class="s2">"AUTONOTE - Your Repository Is UP-TO-DATE"</span>
 	<span class="k">else
 	    </span>notify-send <span class="s2">"AUTONOTE - Files Are Not Pushing ..."</span>
-	<span class="k">fi
-    fi</span> <span class="o">}</span>
+	<span class="k">fi</span>
+        <span class="c">#new_files=`git status | grep "new file:" | awk '{print $2}'`</span>
+        <span class="c">#git commit -m "`date`" &amp;&amp; git push -u origin master</span>
+    <span class="k">fi</span> <span class="o">}</span>
 
 wget <span class="nt">-q</span> <span class="nt">--spider</span> https://www.google.com/
 <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-eq</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
