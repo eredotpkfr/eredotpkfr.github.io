@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "What is autonote.sh ?"
+title:  "What is autonote.sh?"
 date:   2019-05-13 10:26:23 +0300
 categories: english_topics projects
 tags: ubuntu script bash bash_script
 ---
 # autonote.sh
-If you often taking note like me, you wanna backup your notes. I thought this subject and I wrote Bash Script about this subject. If you wonder script details, you can find [script's github page](https://github.com/eredotpkfr/autonote.sh){: target="_blank"}. Script's usage and configurations on [youtube !](https://www.youtube.com/watch?v=3x0NBIHnO4s){: target="_blank"}
+If you often taking note like me, you wanna backup your notes. I thought this subject and I wrote Bash Script about this subject. If you wonder script details, you can find [script's github page](https://github.com/eredotpkfr/autonote.sh){: target="_blank"}. Script's usage and configurations on [youtube!](https://www.youtube.com/watch?v=3x0NBIHnO4s){: target="_blank"}
 <br/>
 # Script's content
 <hr/>

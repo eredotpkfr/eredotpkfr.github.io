@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "What is fire_Ball.py ?"
+title:  "What is fire_Ball.py?"
 date:   2018-10-24 10:27:23 +0300
 categories: english_topics projects
 tags: python python3 fire_Ball hack tool hacker security linux kali_linux script
 ---
-# What is fire_Ball.py ?
+# What is fire_Ball.py?
 I wrote this script when I was at highschool xD. If you wonder script details, you can find [script's github page](https://github.com/eredotpkfr/fire_Ball){: target="_blank"}. Script includes following features.
 <br/>
 * Basic WebSite Cloner

@@ -1,2 +1,2 @@
 # my_blog
-`my_website`
+`just my fu*king my_website`
