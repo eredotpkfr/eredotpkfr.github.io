@@ -17,7 +17,7 @@ Lise yıllarının vermiş olduğu heyecanla 12. sınıfta üniversite sınavın
 * Name Query [ONLINE]
 * Exploit-DB Exploits And Details [ONLINE]
 <br/>
-`burası kod kısmı`
+`burası kod kısmı` <br/>
 ```python
 
 for x in range(1,2,6):
