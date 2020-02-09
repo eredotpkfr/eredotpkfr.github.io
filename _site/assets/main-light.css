@@ -25,7 +25,7 @@ h4:before { content: "####";  margin-right: 9px; }
 h5:before { content: "#####";  margin-right: 9px; }
 h6:before { content: "######";  margin-right: 9px; }*/
 /** Layout */
-.container { width: 100%; max-width: 620px; margin-right: auto; margin-left: auto; }
+.container { width: 100%; max-width: 625px; margin-right: auto; margin-left: auto; }
 
 p { word-wrap: break-word; word-break: break-word; white-space: pre-wrap; }
 
