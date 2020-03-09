@@ -73,7 +73,8 @@ from time import sleep
 res = length.delay('alternative_0')
 while not res.status == 'SUCCESS':
 	sleep(0.5)
-
+# result.wait(timeout=None, interval=0.5) is the same \
+# thing as the above code!
 print(
 	res.get(), # returns result
 	res.id, # returns task id (str)
