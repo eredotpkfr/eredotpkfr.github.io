@@ -9,7 +9,6 @@ tags: ubuntu script bash bash_script
 If you often taking note like me, you wanna backup your notes. I thought this subject and I wrote Bash Script about this subject. If you wonder script details, you can find [script's github page](https://github.com/eredotpkfr/autonote.sh){: target="_blank"}. Script's usage and configurations on [youtube!](https://www.youtube.com/watch?v=3x0NBIHnO4s){: target="_blank"}
 <br/>
 # Script's content
-<hr/>
 
 {% highlight bash linenos %}
 #!/bin/bash
@@ -62,5 +61,3 @@ else
 	Script Failed To Start ..."
 fi
 {% endhighlight %}
-
-<hr/>

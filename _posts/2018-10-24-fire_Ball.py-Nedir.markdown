@@ -8,6 +8,7 @@ tags: python python3 fire_Ball hack tool hacker security linux kali_linux script
 # fire_Ball.py nedir?
 Lise yıllarının vermiş olduğu heyecanla 12. sınıfta üniversite sınavına hazırlanma sürecinde yazmış olduğum bir Hack Tool xD. Ayrıntılar için [github sayfasına](https://github.com/eredotpkfr/fire_Ball){: target="_blank"} bakabilirsiniz. Aşağıdakileri içerir:
 <br/>
+
 * Basic WebSite Cloner
 * Create Actual Proxy List [ONLINE]
 * E-mail Bomber
@@ -17,4 +18,4 @@ Lise yıllarının vermiş olduğu heyecanla 12. sınıfta üniversite sınavın
 * Name Query [ONLINE]
 * Exploit-DB Exploits And Details [ONLINE]
 
-# fire_Ball.py nasıl kullanılır? Örnekler ile [youtube'da](https://www.youtube.com/watch?v=gmL7t2IYXjo){: target="_blank"}
+<br/>fire_Ball.py nasıl kullanılır? Örnekler ile [youtube'da](https://www.youtube.com/watch?v=gmL7t2IYXjo){: target="_blank"}

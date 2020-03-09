@@ -16,5 +16,5 @@ I wrote this script when I was at highschool xD. If you wonder script details, y
 * Link Extractor [ONLINE]
 * Name Query [ONLINE]
 * Exploit-DB Exploits And Details [ONLINE]
-<br/>
-# Usage video with examples [on youtube](https://www.youtube.com/watch?v=gmL7t2IYXjo){: target="_blank"}
+
+<br/>Usage video with examples [on youtube](https://www.youtube.com/watch?v=gmL7t2IYXjo){: target="_blank"}

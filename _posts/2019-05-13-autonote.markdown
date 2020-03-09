@@ -9,7 +9,6 @@ tags: ubuntu script bash bash_script
 Bilgisayarımda tuttuğum notları hem insanlarla paylaşmak için hemde github'da yedeklemek için bash script ile bir script yazdım. Ayrıntılar için script'in [github sayfasına](https://github.com/eredotpkfr/autonote.sh){: target="_blank"} bakabilirsiniz. Script'in kullanımı ve yapılandırılması ile ilgili video [youtube'da](https://www.youtube.com/watch?v=3x0NBIHnO4s){: target="_blank"} mevcut.
 <br/>
 # Script'in içeriği
-<hr/>
 
 {% highlight bash linenos %}
 #!/bin/bash
@@ -62,5 +61,3 @@ else
 	Script Failed To Start ..."
 fi
 {% endhighlight %}
-
-<hr/>
