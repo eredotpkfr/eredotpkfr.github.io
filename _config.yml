@@ -14,6 +14,7 @@ footer: '<a href="https://www.github.com/eredotpkfr/my_n0t3s/" target="_blank">m
 baseurl:
 style: dark # dark (default) or light
 listen_for_clients_preferred_style: true # true or false (default)
+google_analytics: "UA-91257638-4" 
 
 plugins:
   - jekyll-seo-tag
