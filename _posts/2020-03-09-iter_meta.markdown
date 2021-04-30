@@ -15,14 +15,14 @@ Celery ile basit bir uygulama yazalım, bu yazdığımız uygulama parametre ola
 from celery import Celery
 
 app = Celery(
-		'tasks',
-		broker='redis://localhost:6379/0',
-		backend = 'redis://localhost:6379/0'
-	)
+    'tasks',
+    broker='redis://localhost:6379/0',
+    backend = 'redis://localhost:6379/0'
+)
 
 @app.task
 def length(s):
-	return len(s)
+    return len(s)
 {% endhighlight %}
 <br/>Şimdi ise yeni bir terminalden python3 yorumlayıcısı açalım ve tasks dosyasındaki `length()` fonksiyonumuzu import edelim ve celery workerlarına bu işlevi çalıştırmasını söyleyelim. Bu esnada da celery workerlarını takip edelim bunun için `celery -q -A tasks worker -l info` şeklinde komut çalıştırmamız yeterli olacaktır.
 
@@ -72,36 +72,36 @@ from time import sleep
 # 0
 res = length.delay('alternative_0')
 while not res.status == 'SUCCESS':
-	sleep(0.5)
+    sleep(0.5)
 # result.wait(timeout=None, interval=0.5) is the same \
 # thing as the above code!
 print(
-	res.get(), # returns result
-	res.id, # returns task id (str)
-	res.status, # returns task status (str)
-	res.info # returns task information
+    res.get(), # returns result
+    res.id, # returns task id (str)
+    res.status, # returns task status (str)
+    res.info # returns task information
 )
 # 1
 res = length.delay('alternative_1')
 while not res.ready():
-	sleep(0.3)
+    sleep(0.3)
 
 print(
-	res.get(),
-	res.task_id, # returns task id (str)
-	res.ready(), # returns task is ready? (boolean)
-	res.info
+    res.get(),
+    res.task_id, # returns task id (str)
+    res.ready(), # returns task is ready? (boolean)
+    res.info
 )
 # 2
 res = length.delay('alternative_2')
 while not res.successful():
-	sleep(0.1)
+    sleep(0.1)
 
 print(
-	res.get(),
-	res.id,
-	res.successful(), # returns task is ready? (boolean)
-	res.info
+    res.get(),
+    res.id,
+    res.successful(), # returns task is ready? (boolean)
+    res.info
 )
 
 # OUTPUT
