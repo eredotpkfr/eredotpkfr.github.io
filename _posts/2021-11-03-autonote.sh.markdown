@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "autonote.sh"
-date:   2021-11-05 10:26:23 +0300
+date:   2021-11-03 10:26:23 +0300
 categories: projects
 tags: ubuntu script bash bash_script
 ---
