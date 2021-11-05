@@ -15,7 +15,7 @@ tags: fast validation validator validate ipv4 ipv6 ipv6_cidr ipv4_cidr
 - ipv6
 - ipv6_cidr
 
-Can be used on bulk IP data. You can find detailed test benchmark at below.
+Can be used on bulk IP data. You can find detailed test benchmark at below. Also available on [pypi.org](https://pypi.org/project/fipv/) and [github.com](https://www.github.com/eredotpkfr/fipv)
 
 ## Installation
 `fipv` can be installed easly with `pip3`. It requires `Python 3.7+`

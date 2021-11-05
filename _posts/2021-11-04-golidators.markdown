@@ -8,7 +8,7 @@ tags: go golang validation data-validation validator validations validate data-v
 ![Workflow](https://github.com/eredotpkfr/golidators/actions/workflows/go.yml/badge.svg) ![Go Report Card](https://goreportcard.com/badge/github.com/eredotpkfr/golidators) ![Go Reference](https://pkg.go.dev/badge/github.com/eredotpkfr/golidators.svg) ![Go Version](https://img.shields.io/github/go-mod/go-version/eredotpkfr/golidators) ![Release](https://img.shields.io/github/v/release/eredotpkfr/golidators) ![License](https://img.shields.io/badge/license-MIT-blue) ![Stars](https://img.shields.io/github/stars/eredotpkfr/golidators?style=social)
 
 # golidators
-Golidators is a golang package, it includes basic data validation functions and regexes.
+Golidators is a golang package, it includes basic data validation functions and regexes. Also available on [pkg.go.dev](https://pkg.go.dev/github.com/eredotpkfr/golidators) and [github.com](https://www.github.com/eredotpkfr/golidators)
 
 ## Install
 {% highlight bash linenos %}
