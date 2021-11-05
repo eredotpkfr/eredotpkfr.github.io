@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "autonote.sh"
+date:   2021-11-05 10:26:23 +0300
+categories: projects
+tags: ubuntu script bash bash_script
+---
+## autonote.sh
+Bash script to automatically push your notes to github. Configuration and usage on [youtube](https://www.youtube.com/watch?v=3x0NBIHnO4s). Also available on [github](https://www.github.com/eredotpkfr/autonote.sh).
+## Contact
+Blog - [erdoganyoksul.com](https://www.erdoganyoksul.com)
+Mail - erdoganyoksul3@gmail.com
