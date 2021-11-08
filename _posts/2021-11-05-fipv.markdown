@@ -8,7 +8,7 @@ tags: fast validation validator validate ipv4 ipv6 ipv6_cidr ipv4_cidr
 ![Test](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml/badge.svg) ![PyPI](https://img.shields.io/pypi/v/fipv) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fipv) ![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg) ![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)
 
 # fipv
-`fipv` (fast ip validator) is a python package build with `C` language. Simply it includes basic IP address validator functions as a `C` function, so works faster than others. Following `C` functions avaliable on this package:
+`fipv` (fast ip validator) is a python package build with `C` language. Simply it includes basic IP address validator functions as a `C` function, so works faster than others. Following `C` functions available on this package:
 
 - ipv4
 - ipv4_cidr
