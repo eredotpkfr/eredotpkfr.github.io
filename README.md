@@ -1,2 +1,2 @@
-# my_blog
-`just my fu*king website`
+## eredotpkfr.github.io
+My personal website ([erdoganyoksul.com](https://erdoganyoksul.com))
