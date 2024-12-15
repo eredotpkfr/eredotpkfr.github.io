@@ -5,3 +5,5 @@ gemspec
 
 
 gem 'jekyll-seo-tag'
+gem 'csv'
+gem 'base64'
