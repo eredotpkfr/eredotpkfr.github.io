@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "subscan"
+date:   2024-12-15 10:00:00 +0300
+categories: projects
+tags: rust crawler scanner bruteforce rust-lang subdomain pentesting pentest-tool searchengines subdomain-enumeration zonetransfer
+---
+<div align="center">
+    <img alt="Subscan Logo" height="105px" src="https://github.com/eredotpkfr/subscan/blob/main/assets/logo-light.png?raw=true">
+</div>
+<p align="center">
+    <a href="https://github.com/eredotpkfr/subscan/?tab=readme-ov-file#install">Install</a> • <a href="https://github.com/eredotpkfr/subscan/?tab=readme-ov-file#usage">Usage</a> • <a href="https://docs.rs/subscan/latest/subscan/">Doc</a> • <a href="https://www.erdoganyoksul.com/subscan/">Book</a> • <a href="https://github.com/eredotpkfr/subscan/?tab=readme-ov-file#docker">Docker</a> • <a href="https://github.com/eredotpkfr/subscan/?tab=readme-ov-file#development">Development</a>
+</p>
+<br>
+Subscan is a powerful subdomain enumeration tool built with [Rust](https://www.rust-lang.org/), specifically designed for penetration testing purposes. It combines various discovery techniques into a single, lightweight binary, making subdomain hunting easier and faster for security researchers
+
+## Features
+• Use multiple search engines (`Google`, `Yahoo`, `Bing`, `DuckDuckGo`, etc.)
+• Integrate with APIs like `Shodan`, `Censys`, `VirusTotal` and more
+• Perform zone transfer checks
+• Subdomain brute-forcing with optimized wordlists
+• Resolve IP addresses for all subdomains
+• Export reports in `CSV`, `HTML`, `JSON`, or `TXT` formats
+• Customize HTTP requests (user-agent, timeout, etc.)
+• Rotate requests via proxies (`--proxy` argument)
+• Fine-tune IP resolver with `--resolver` arguments
+• Filter and run specific modules with `--skips` and `--modules`
+• Native support for `amd64` and `arm64` Linux platforms
+• A tiny container that won't eat up your storage, under 1GB and ready to roll
+• Compatible with multiple platforms and easy to install as a single binary
+
+## Contact
+Blog - [erdoganyoksul.com](https://www.erdoganyoksul.com)
+Mail - erdoganyoksul3@gmail.com
